@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arni Nalawade</title>
+
+    <!--Slider stuff-->
+    <style type="text/css">
+    *{
+        margin: 0;
+    }
+
+    .bgImage{
+        position: relative;
+        width:100%;
+        height: 100vh;
+        background-image: url('images/backgrounds/bg-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center ;
+        animation:bgchange 50s linear infinite;
+        overflow: hidden;
+    }
+
+    @keyframes bgchange {
+        0%{
+            background-image: url('images/backgrounds/bg-1.jpg');
+        }
+        20%{
+            background-image: url('images/backgrounds/bg-2.2.jpg');
+        }
+        35%{
+            background-image: url('images/backgrounds/bg-3.2.jpg');
+        }
+        45%{
+            background-image: url('images/backgrounds/bg-4.jpg');
+        }
+    }
+
+    .overlay{
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:50px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .content{
+        position: relative;
+        width: 100%;
+        height:100%;
+        color:white;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-self: flex-end;
+        z-index: 2;
+    }
+    .content h3{
+        font-size: 60px;
+        margin-top: 0px;
+    }
+    /*.content h3 span{
+        color: #008c0e;
+    }*/
+    .content p{
+        font-size: 18px;
+        width:60%;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .content button{
+        color:white;
+        border:black;
+        outline: black;
+        font-size: 18px;
+        background-color: #00bf13;
+        padding: 14px 22px;
+        text-transform: uppercase;
+        border-radius: 25px;
+        transition: 0.5s;
+    }
+
+    .content button:hover{
+        background-color: #008c0e;
+    } 
+
+    .primary{
+        align-items: center;
+        position: relative;
+        right: 95px;
+    }
+
+    .secondary{
+        align-items: center;
+        position: relative;
+        left: 95px;
+        bottom: 49.5px;
+    }
+    </style>
+
+    <!--jQuery Link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>   
+        $(function() {
+         $(".toggle").on("click",function(){
+            if($(".item").hasClass("active")){
+                $(".item").removeClass("active");
+            }
+            else{
+                $(".item").addClass("active");
+            }
+         })
+        });
+    </script>
+
+    <!--Links to stylesheet and font-->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+    <!--FontAwesome CDN link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+
+</head>
+
+<body class="main-content">
+    <header class="section sec1 header active" id="home">
+        <div class="bgImage">
+            <div class="overlay"></div>
+            <div class="content">
+                <h3>Hello, My Name is <span>Arni</span> !</h3>
+                <p><br>I am studying Mechatronics Engineering at the University of Waterloo</p>
+                <p><br>I love to learn about new technologies, apply my knowledge and skills and create deployable solutions</p>
+                    <button class="primary"><a href="https://www.linkedin.com/in/arni-nalawade/">LinkedIn</a></button>
+                    <button class="secondary"><a href="https://github.com/Arni-Nalawade">Github</a></button>
+            </div>  
+        </div>   
+    </header>
+
+    <main>
+        <!--About section-->
+        <section class="section sec2 about" id="about">
+            <div class="main-title">
+                <h2>About <span> Me</span> </h2>
+                <div class="img">
+                    <!--Image size must be 600x400 or less-->
+                    <img src="images\MyImage-about.jpg">
+                </div>
+                
+            </div>
+            <div class="about-container" style="height:100px">
+                <div>
+                    <h4>Here is a little information about me</h4>
+                    <p>I completed my education uptil grade 10 in India where I was involved in co-curricular activties like Bharatnatyam, drawing and painting competitions and was also a 
+                        journalist for the school's monthly magazine. <br> I immigrated to Canada in grade 11 and attended Laurel Heights Secondary School (formerly known as Sir John A MacDonald Secondary School). There I was a 
+                        part of various clubs such as the Science Fair Club, DECA (Decathon Competition club) and the Key Club. As a member of DECA I participated in the entrepreneurship 
+                        competition and cleared district level. Through the Key Club I had the oppurtunity to volunteer at the Volunteer Action Centre (VAC). I received my OSSD (Ontario Secondary School Diploma) in August 2021 and was admitted 
+                        to Mechatronics Engineering at the University of Waterloo.
+                        <br> At UWaterloo engineering I was a part of design teams like WARG (Waterloo Arial Robotics Group) and UWAFT (University of Waterloo
+                        Alternative Fuels Team). I am also a part of the digital arts club where I am learning techniques of digital drawing.
+                        <br> I love connecting with people and learning about new technologies. I aspire to be part of projects and teams focused on machine learning 
+                        and software.
+                     </p>
+                    </box>
+            </div>
+            <div class="about-stats">
+                <h5 class="stat-title">My Skills</h5>
+                <div class="progress-bars">
+                    <!--First-->
+                    <div class="progress-bar">
+                        <p class="prog-title">html5</p>
+                        <div class="progress-con">
+                            <p class="prog text">75%</p>
+                            <div class="progress">
+                                <span class="HTML"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Second-->
+                    <div class="progress-bar">
+                        <p class="prog-title">CSS</p>
+                        <div class="progress-con">
+                            <p class="prog text">80%</p>
+                            <div class="progress">
+                                <span class="CSS"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Third-->
+                    <div class="progress-bar">
+                        <p class="prog-title">Python</p>
+                        <div class="progress-con">
+                            <p class="prog text">65%</p>
+                            <div class="progress">
+                                <span class="Python"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fourth-->
+                    <div class="progress-bar">
+                        <p class="prog-title">C/C++</p>
+                        <div class="progress-con">
+                            <p class="prog text">50%</p>
+                            <div class="progress">
+                                <span class="C"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fifth-->
+                    <div class="progress-bar">
+                        <p class="prog-title">SolidWorks</p>
+                        <div class="progress-con">
+                            <p class="prog text">65%</p>
+                            <div class="progress">
+                                <span class="SolidWorks"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sixth-->
+                    <div class="progress-bar">
+                        <p class="prog-title">AutoCAD</p>
+                        <div class="progress-con">
+                            <p class="prog text">85%</p>
+                            <div class="progress">
+                                <span class="AutoCAD"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Seventh-->
+                    <div class="progress-bar">
+                        <p class="prog-title">Javascript</p>
+                        <div class="progress-con">
+                            <p class="prog text">65%</p>
+                            <div class="progress">
+                                <span class="Javascript"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Eighth-->
+                    <div class="progress-bar">
+                        <p class="prog-title">Kubernetes</p>
+                        <div class="progress-con">
+                            <p class="prog text">50%</p>
+                            <div class="progress">
+                                <span class="Kubernetes"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </section>
+
+        <!--Projects-->
+        <section class="section sec3 projects" id="projects">
+            <div class="blogs-content">
+                <div class="main-title">
+                    <h2>My <span> Projects</span> </h2>
+                </div>
+                <div class="about-container" style="height:100px">
+                    <div class="box">
+                        <h4>Here are some of the engineering projects I have worked on so far</h4>
+                        <p> I enjoyed the process of learning new skills and implementing them as I worked on creating these projects.
+                           I am proud of how these turned out.
+                           <br> I endeavour to keep learning new skills and apply them to create solutions to real-life problems
+                        </p>
+                        </box>
+            </div>
+            <div class="blogs">
+                <!--Project 1-->
+                <div class="blog">
+                    <img src="images\Projects\Portfoliowebsite.jpg" alt="">
+                    <div class="blog-text">
+                        <h5>
+                            <a href="https://github.com/Arni-Nalawade/Arni-Nalawade-Portfolio">Portfolio Website</a>
+                        </h5>
+                        <p>
+                            I wanted to improve my web development skills and decided to create a website which showcases me and my skills. 
+                            The website was made using <b> HTML5, CSS and Javascript </b>, in addition I also used different web development libraries and CDNs to improve functionality and performance. These incude JQuery, Google font API and Font Awesome.
+
+                        </p>
+                    </div>
+                </div>
+
+                 <!--Project 2-->
+                 <div class="blog">
+                    <img src="images\Projects\Beatmaker.jpg" alt="">
+                    <div class="blog-text">
+                        <h5>
+                            <a href="https://github.com/Arni-Nalawade/beatMaker/tree/master/BeatMaker">BeatMaker</a>
+                        </h5>
+                        <p>
+                            I wanted to expermiment using <b>Python</b> to create games and created this fun little minigame which uses the <b>Pygame library </b> to allow users to 
+                            create new beat sequences from the pre-existing sounds. It also provides additional features to reload saved beats, increase tempo and number of sequences.
+                        </p>
+                    </div>
+                </div>
+
+                 <!--Project 3-->
+                 <div class="blog">
+                    <img src="images\Projects\Hallway.jpg" alt="">
+                    <div class="blog-text">
+                        <h5>
+                            <a href="https://youtu.be/1J8oC5hH37U">Hall-E</a>
+                        </h5>
+                        <p>
+                            An open-ended group project which I made with my friends Nivey and Emily using <b>C++ and Lego Mindstorms bot</b>. Hall-E is a hallway cleaning robot capable of cleaning
+                            the very edges of the hallway where grime and dirt tends to accumulate. It is also capable of obstacle detection, auto cleaning-loops and auto-positioning.
+                        </p>
+                    </div>
+                </div>
+
+                 <!--Project 4-->
+                 <div class="blog">
+                    <img src="images\Projects\Cluster.jpg" alt="">
+                    <div class="blog-text">
+                        <h5>
+                            <a href="https://github.com/Arni-Nalawade/Kubernetes/tree/main">Cloud DB-Creation</a>
+                        </h5>
+                        <p>
+                            Cloud development has always interested me and hence I coded a small local cluster project which used a cloud node created in <b>Minikube </b> 
+                            to take database creation requests from <b>Mongoexpress</b> and forward them to <b>MongoDB</b>. I learned a lot through this project especially how to code <b>yaml files</b>, configuring and using VMs and passing
+                            commands through <b>Kubectl</b>.
+                        </p>
+                    </div>
+                </div>
+
+                 <!--Project 5-->
+                 <div class="blog">
+                    <img src="images\Projects\Sumobot.jpg" alt="">
+                    <div class="blog-text">
+                        <h5>
+                            <a href="https://www.youtube.com/watch?v=vsE_LmW-nIc">Flipper!</a>
+                        </h5>
+                        <p>
+                            A Sumobot which I made using custom PCB made by UV radiation etching and designed using Traxxmaker software. The robot chassis 
+                            was made using various woodcutting tools. It is capable of opponent detection, pit-maneuvers and edge detection.
+                            I designed this robot from the groundup and am very proud of how it turned out. It won 4th place in the local robot fighting tournament.
+                        </p>
+                    </div>
+                </div>
+
+                 <!--Project 6-->
+                 <div class="blog">
+                    <img src="images\Projects\EduBubble.jpg" alt="">
+                    <div class="blog-text">
+                        <h5>
+                            <a href="https://github.com/Arni-Nalawade/Holiday-Hackathon">EduBubble</a>
+                        </h5>
+                        <p>
+                            An education platform coded using <b>HTML, CSS and DJango</b> for Holiday-Hackathon. Me and my team wanted to create a web-application which made it
+                            easier for the teachers and the students to create different class groups and be able to make a discussion forum for class queries and projects.
+                            The application also provided a login for every user for additional security.
+                        </p>
+                    </div>
+                </div>
+
+                 <!--Project 7-->
+                 <div class="blog">
+                    <img src="images\Projects\TinkerCAD.jpg" alt="">
+                    <div class="blog-text">
+                        <h5>
+                            <a href="https://github.com/Arni-Nalawade/Tinkercad-Repository/tree/main/People%20counter%20circuit">People Counter Circuit TinkerCAD</a>
+                        </h5>
+                        <p>
+                            This is one of the many projects I coded in <b>TinkerCAD</b> using an <b>Arduino Uno</b>. Created during a time when the COVID pandemic was still ongoing the purpose of this design 
+                            is to help in social distancing. It uses a light sensor to sense the number of people in the store and display instructions on whether more people can enter or if they should wait.
+                        </p>
+                    </div>
+                </div>
+
+                <!--Project 8-->
+                <div class="blog">
+                    <img src="images\Projects\Potentio.jpg" alt="">
+                    <div class="blog-text">
+                        <h5 class="not-link">
+                            Measure-io
+                        </h5>
+                        <p>
+                            Measure-io was created as an alternate measuring device capable of measuring (with an accuracy of 4 decimal places) objects less than 1.5m in length. 
+                            The program was written in <b>C++ in Arduino</b> and used the change in the voltage of the potentiometer derived through the moving rack and pinion to generate 
+                            length calculation. The graphing simulation and calculations were done in <b>Microsoft Excel</b>
+                        </p>
+                    </div>
+                </div>
+
+                <!--Project 9-->
+                <div class="blog">
+                    <img src="images\Projects\Bridge.jpg" alt="">
+                    <div class="blog-text">
+                        <h5>
+                            <a href="https://youtube.com/shorts/-G11szRvcLs?feature=share">Catenary Bridge</a>
+                        </h5>
+                        <p>
+                            As part this project, we were tasked with building a bridge which could withstand 200 kN of load 
+                            using 2.5 meters of plywood and some dowels. We were able to design and build a bridge which could withstand 203 kN of 
+                            load. The design simulation was done using an online 2D truss analysis tool and we created a prototype using laser cutting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Experience-->
+        <section class="section sec4 work" id="work">
+            <div class="blogs-content">
+                <div class="main-title">
+                    <h2>My <span> Experience</span> </h2>
+                </div>
+                <div class="about-container" style="height:100px">
+                    <div class="box">
+                        <h4>My Workplace Experiences</h4>
+                        <p>My work experience includes different aspects of engineering ranging from software, mechanical, design and journalism.
+                            <br> All these experiences have allowed me to connect with brilliant people and learn about their unique disciplines. I believe that 
+                            the skills, knowledge and experience I have gained will aid me in my journey of becoming a good engineer.   
+                        </p>
+                        </box>
+            </div>
+            <div class="container">
+                <div class="timeline">
+                    <ul>
+                        <!--T1-->
+                        <li class="time">
+                            <div class="timeline-content">
+                                <h7 class="date">May 2023 - Aug 2023</h7>
+                                <h6>Design Engineer</h6>
+                                <h6>Lifestyle Home Products</h6>
+                                <p>- Made construction drawings in AutoCAD for custom sunrooms and
+                                    provided engineering with a complete set of architectural drawing plans for manufacturing. Suggested a change to 
+                                    better use the manpower by grouping the construction jobs per region, the installation schedule was accordingly adjusted. This 
+                                    change increased engineering resource efficiency by 26%.
+                                    <br>- Attended "feedback meetings" with clients and presented the prototype drawings of their proposed sunrooms. These meetings 
+                                    enabled me to make adjustments to the construction drawings before they were passed on to manufacturing. 
+                                    <br>- Created performance and accountability sheets (PAR) and ensured any outliers were addressed in weekly meetings. These changes were
+                                    then communicated with the sales department for them to rectify by following up with the clients.
+                                 </p>
+                            </div>
+                        </li>
+
+                        <!--T2-->
+                        <li class="time">
+                            <div class="timeline-content">
+                                <h7 class="date">Sep 2022 - Dec 2022</h7>
+                                <h6>Teaching Associate</h6>
+                                <h6>University of Waterloo</h6>
+                                <p>- Worked with a team of six to mark exams and assignments as per professor's instructions. Created resources and held study 
+                                    sessions to help students grasp important concepts. In addition, drafted midterm and final exam question banks.
+                                    <br>- Drafted a "Dimensioning Guidelines" document which summarized the major dimensioning rules (according to ASME standard) to provide the students with a comprehensive
+                                    starting rulebook for engineering dimensioning.
+                                    <br>- Conducted team sessions for the midterm and final robotics project guiding students through the engineering design cycle and helped in C++ coding for the Mindstorms/Claw bots. 
+                                    Marked the projects according to the teams completion of project scope.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!--T3-->
+                        <li class="time">
+                            <div class="timeline-content">
+                                <h7 class="date">Dec 2021 - April 2022</h7>
+                                <h6>Software Engineer</h6>
+                                <h6>Stackpole International</h6>
+                                <p>- Collaborated with the quality specialists and manufacturing team to design a "CMM measure" program in Anaconda Python capable of extracting data from the CMM machine
+                                    and running calculations to find percent deviation from tolerance. The program reduced the need for manual calculations thus speeding up faliure response by 22%.
+                                    <br>- Developed a "Tool life tracker" program using Visual Basic, Auto-scheduler and Excel which logged real time tool usage for the 105 CNC machines on floor. The program 
+                                    created performance data for each machine increasing tool usage efficiency by 42%.
+                                    <br>- Collaborated with the development team to design and create a new prototype transmission holder for deep washing manufactured parts.
+                                    <br>- Kept all factory work instructions updated and created factory layouts in AutoCAD.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!--T4-->
+                        <li class="time">
+                            <div class="timeline-content">
+                                <h7 class="date">April 2019 - June 2019</h7>
+                                <h6>Drawing Assistant</h6>
+                                <h6>Chitranjali Drawing Classes<h6>
+                                <p>- Assisting the teacher with drawing assignments and stocking drawing supplies for the junior batch.
+                                    <br> - Managing scheduling of individual students and re-scheduling in the case of an absence.
+                                    <br> - Helping the Academy with managing of "Summer Drawing Poster competition"
+                                </p>
+                            </div>
+                        </li>
+
+                        <!--T5-->
+                        <li class="time">
+                            <div class="timeline-content">
+                                <h7 class="date">June 2017 - April 2019</h7>
+                                <h6>Lead Reporter and Editor For Monthly Magazine</h6>
+                                <h6>Hutchings High School and Junior College<h6>
+                                <p>- Coordinated a team of 6 junior reporters, delegating individual responsibilities like taking photos of important events, documenting school competitions and writing relevant articles.
+                                    <br> - In charge of writing and conducting interviews for the "On the know!!" section of the magazine which included life lessons from a prominent personality.
+                                    <br> - Participated in bi-weekly meetings to decide the topic and theme of the next magazine issue, listening to reader's feedbacks and pitching ideas about possible improvements.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="line"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--Hobbies section-->
+        <section class="section sec5 cc" id="cc">
+            <div class="main-title">
+                <h2>My <span> Hobbies</span> </h2>
+            </div>
+            <div class="about-container" style="height:100px">
+                <div class="box">
+                    <h4>A collage of all my hobbies!!</h4>
+                    <p>In the busy engineering schedule including projects, coursework and work experience, I have strived to take some time out for my hobbies. 
+                    </p>
+                </div>
+            </div>
+            <div class="main-slider">
+                <div class="slider">
+                    <div class="slide active">
+                        <img class="img" src="images\Hobbies\Drawing.jpg" alt="">
+                        <div class="info">
+                            <h7>Drawing and Painting</h7>
+                            <p>In my spare time I love to grab some art supplies and paint my worries away. Here are some of my art pieces made
+                                over the years.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img class="img" src="images\Hobbies\Dancing.jpg" alt="">
+                        <div class="info">
+                            <h7>Bharatnatyam</h7>
+                            <p>Bhatarnatyam is a classical dance of India involving telling a story through dance and music. As an avid reader
+                                I was drawn to this unique way of storytelling and acheived level 3 proficency in this art.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img class="img" src="images\Hobbies\books.jpg" alt="">
+                        <div class="info">
+                            <h7>Reading</h7>
+                            <p>I am an avid reader and love to read any fantasy-fiction or biographies I can get my hands on!!. After through
+                                consideration for space I had to narrow my list of favourites to the ones shown here. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <i class="fas fa-chevron-left prev-btn"></i>
+                        <i class="fas fa-chevron-right next-btn"></i>
+                    </div>
+                    <div class="navigation-visibility">
+                        <div class="slide-icon active"></div>
+                        <div class="slide-icon"></div>
+                        <div class="slide-icon"></div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+        <!--Footer
+        <section class="footer" id="foot"></section>-->
+    </main>
+
+<!--Navigation Bar Controls-->
+<div class="controls">
+    <nav>
+        <ul class="menu">
+            <li class="logo">
+                <div class="logo">
+                    <h1>&nbsp;&nbsp;<span>ARNI</span> NALAWADE</h1>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="control control-1 active-btn" data-id="home">
+                    <i class="fas fa-home"></i><p>&nbsp;Home</p>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="control control-2" data-id="about">
+                    <i class="fas fa-user"></i><p>&nbsp;About</p>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="control control-3" data-id="projects">
+                    <i class="fas fa-newspaper"></i><p>&nbsp;Projects</p>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="control control-4" data-id="work">
+                    <i class="fas fa-briefcase"></i><p>&nbsp;Experience</p>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="control control-5" data-id="cc">
+                    <i class="fas fa-envelope-open"></i><p>&nbsp;Hobbies</p>
+                    
+                </div>
+            </li>
+            <!--Hamburger Menu-->
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+</div>
+ 
+    <!--Active Button Reader-->
+    <script src="script.js"></script>
+
+</body>
+</html>
